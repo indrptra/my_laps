@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView
+            android:id="@+id/tv_category_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="CATEGORY NAME" android:textStyle="bold" android:textSize="20sp"
+            android:fontFamily="@font/arial"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_course_rv_group"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_sorted_course"
+           />
+</LinearLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "973612666834",
+    "firebase_url": "https://mylapps.firebaseio.com",
+    "project_id": "mylapps",
+    "storage_bucket": "mylapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973612666834:android:0043a5f42774d846",
+        "android_client_info": {
+          "package_name": "com.indosat.mylapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973612666834-grcssv7c1hcitl99g6salu2mtl0b9a5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnhdfd4r3ZvUuhowDJ62mKpQz9gD4QajM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973612666834-grcssv7c1hcitl99g6salu2mtl0b9a5r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">MyLearning</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_filter">FILTER</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--right side menu-->
+    <string name="menu_my_dashboard">My Dashboard</string>
+    <string name="menu_my_inbox_">My Inbox</string>
+    <string name="menu_my_courses">My Courses</string>
+    <string name="menu_my_discussion">My Discussion</string>
+    <string name="menu_my_home">Home</string>
+    <string name="menu_my_course_categories">Course Categories</string>
+    <string name="menu_my_knowledge_forum">Knowledge Forum</string>
+    <string name="menu_my_support">Support</string>
+    <string name="menu_my_sign_out">Sign Out</string>
+
+    <!--right side menu expand-->
+    <string name="menu_exp_online_certification">Online Certification</string>
+    <string name="menu_exp_enterprise">Enterprise</string>
+    <string name="menu_exp_technology">Technology</string>
+    <string name="menu_exp_commerce">Commerce</string>
+    <string name="menu_exp_leadership">Leadership</string>
+
+    <!--Login-->
+    <string name="login_id">Employee Id / NIK</string>
+    <string name="login_password">Password</string>
+
+    <!--Toast Message-->
+    <string name="tm_login_empty_form">Field(s) must not be empty</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_see_all">SEE ALL COURSE</string>
+
+    <!--Header-->
+    <string name="header_title_leaderboard">LEADERBOARD</string>
+    <string name="title_activity_course_detail">CourseDetailActivity</string>
+
+    <!--BUTTONS-->
+    <string name="button_start_learning">START LEARNING</string>
+    <string name="button_click_here">CLICK HERE</string>
+
+    <!--Notes-->
+    <string name="notes_start_learning">Course will be marked as enrolled by reading or watching contents
+    </string>
+    <string name="title_activity_main_discussion">MainDiscussionActivity</string>
+    <string name="title_activity_my_discussion_main">MyDiscussionMainActivity</string>
+    <string name="title_activity_main_knowledge_forum">MainKnowledgeForumActivity</string>
+
+    <string name="just_now">Right now</string>
+    <string name="a_min_ago">1 minute ago</string>
+    <string name="mins_ago">" minutes ago"</string>
+    <string name="a_hour_ago">1 hour ago</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="days_ago">" days ago"</string>
+    <string name="week_ago">" week ago"</string>
+    <string name="weeks_ago">" weeks ago"</string>
+    <string name="title_activity_notification_detail">NotificationDetailActivity</string>
+    <string name="action_report">Report</string>
+</resources>

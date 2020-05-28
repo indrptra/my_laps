@@ -1,0 +1,9 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item android:drawable="@drawable/drawable_black_shadow"/>
+    <item
+        android:drawable="@drawable/ic_arrow_back_white"
+        android:bottom="1px" />
+
+</layer-list>

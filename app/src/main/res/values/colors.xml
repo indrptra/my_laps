@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFCD00</color>
+    <color name="colorPrimaryDark">#FFCD00</color>
+    <color name="colorAccent">#e61610</color>
+    <color name="colorLightGray">#ebebeb</color>
+    <color name="colorSemiLightGray">#d6d6d6</color>
+    <color name="colorBody">#FAFAFA</color>
+    <color name="colorHorizontalProgress">#FFA834</color>
+    <color name="colorFABOrange">#FF7043</color>
+    <color name="colorLightGreen">#92D36E</color>
+    <color name="row_activated">#e0e0e0</color>
+</resources>

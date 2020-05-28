@@ -1,0 +1,170 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'com.google.gms.google-services'
+
+def getDate() {
+    return new Date().format('yyyyMMddHHmmss')
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        //applicationId "mylearning.indosat.id.mylearning"
+        applicationId "com.indosat.mylapi"
+        minSdkVersion 19
+        targetSdkVersion 28
+        multiDexEnabled true
+        versionCode 2
+        versionName "1.0.5"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    flavorDimensions "default"
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    productFlavors {
+        prod {
+            versionCode 1
+            versionName "1.0.0"
+        }
+        dev {
+            versionCode 3
+            versionName "0.0.6"
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                def project = "MyLapps"
+                def SEP = "_"
+                def flavor = variant.productFlavors[0].name
+                def buildType = variant.variantData.variantConfiguration.buildType.name
+                def version = variant.versionName
+                def date = new Date();
+                def formattedDate = date.format('ddMMyy_HHmm')
+
+                def newApkName = project + SEP + flavor + SEP + buildType + SEP + version + SEP + formattedDate + ".apk"
+
+                outputFileName = new File(newApkName)
+            }
+        }
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.1'
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.23.0'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha01'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    //implementation "com.matthew-tamlin:sliding-intro-screen:$slidingIntroVersion"
+    implementation "com.github.paolorotolo:appintro:$appIntroVersion"
+    implementation "uk.co.chrisjenx:calligraphy:$calligraphyVersion"
+    implementation "com.chibatching.kotpref:kotpref:$kotprefVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitRXGsonAdapterVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitRXGsonAdapterVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitRXGsonAdapterVersion"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    implementation "com.xwray:groupie:$groupieVersion"
+    implementation "com.xwray:groupie-kotlin-android-extensions:$groupieVersion"
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+    //implementation 'com.applandeo:material-calendar-view:1.4.0'
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    implementation "com.karumi:dexter:$dexterVersion"
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+
+    //old lib
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+//    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:9.0.1'
+
+    //editorview rich
+    implementation 'jp.wasabeef:richeditor-android:1.2.2'
+    /*implementation ('com.github.irshulx:laser-native-editor:3.0.3@aar'){
+        transitive = true
+    }*/
+
+    //color picker
+    implementation 'com.jaredrummler:colorpicker:1.1.0'
+
+    //zendesk Zopim
+    implementation group: 'com.zopim.android', name: 'sdk', version: '1.4.2'
+
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    //emoji compat
+    implementation 'com.android.support:support-emoji:28.0.0'
+
+
+    //swipelayout
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+
+    //fabric
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.9@aar') {
+        transitive = true
+    }
+
+    //firebase in app messaging
+    implementation 'com.google.firebase:firebase-inappmessaging-display:17.0.4'
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+    implementation 'com.github.judemanutd:autostarter:1.0.3'
+
+    //Event bus
+    implementation 'de.greenrobot:eventbus:2.4.0'
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/message_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:padding="2dip">
+
+    <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:padding="5dip" >
+
+        <ImageView
+                android:id="@+id/list_image"
+                android:tint="#E0F2F1"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_chat"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dip"
+            android:paddingBottom="5dip"
+            android:text="You completed course module, module ID:2489"
+            android:textColor="#040404"
+            android:textSize="14sp"
+            android:layout_toEndOf="@+id/thumbnail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"/>
+
+    <TextView
+            android:id="@+id/tv_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_message"
+            android:layout_below="@id/tv_message"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="2dip"
+            android:paddingBottom="2dip"
+            android:text="2 years ago"
+            android:textColor="#343434"
+            android:textSize="12sp" />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dip"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/tv_timestamp"
+            android:background="@color/colorSemiLightGray"/>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_cat_btn"
+    style="@style/MLMenuButton"
+    android:paddingStart="40dp"
+    android:textColor="@android:color/darker_gray"/>

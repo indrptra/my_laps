@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:id="@+id/sub_bottom_container"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:background="@drawable/white_bg"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:id="@+id/subcat_name"
+                    android:background="@drawable/white_bg"
+                    android:text="SUB CATEGORIES"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:textSize="15sp"
+            />
+            <ImageView
+                    android:id="@+id/csub_cat_arrow_image"
+                    android:src="@drawable/ic_right_chevron"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:rotation="90"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+
+                android:background="@color/dark_gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                tools:listitem="@layout/item_sub_item"
+                android:id="@+id/sub_categories_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

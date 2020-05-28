@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBody"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    tools:context=".productcontext.mycourse.MyCourseMainActivity">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mycourses_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextColor="@android:color/darker_gray"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
+        app:tabBackground="@android:color/white"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/dark_gray"/>
+    <id.indosat.ml.common.view.MLViewPager
+        android:id="@+id/mycourses_view_pager"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+</LinearLayout>

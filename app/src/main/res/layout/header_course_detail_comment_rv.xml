@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="8dp"
+              android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/course_detail_header_comment_number"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:id="@+id/course_detail_header_comment_box"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/course_detail_header_comment_box_image"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_sad_face"
+            android:layout_weight="0.1"
+            android:minHeight="40dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/course_detail_header_comment_fake_et"
+            android:layout_marginStart="4dp"
+            android:layout_weight="0.7"
+            android:textSize="13.5sp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorSemiLightGray"
+            android:layout_width="0dp"
+            android:padding="4dp"
+            android:hint="Write your comment here"
+            android:minHeight="40dp"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+</LinearLayout>
